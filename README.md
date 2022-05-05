@@ -1,4 +1,19 @@
 # NoduleX
+
+## Note - Wookjin Choi
+tested using miniconda2-latest with small modifications.
+
+Change keras's backend and dim ordering to thenao
+~/.keras/keras.json
+```json
+{
+    "floatx": "float32",
+    "epsilon": 1e-07,
+    "backend": "theano",
+    "image_dim_ordering": "th"
+}
+```
+
 Supporting code for the paper _"Highly accurate model for prediction of lung nodule malignancy with CT scans"_.
 
 ## Instructions
@@ -21,7 +36,7 @@ Use the script `keras_CNN/keras_evaluate.py`, providing the correct model .json 
 python keras_CNN/keras_evaluate.py \
     --window \
     data/CNN_models/CNN47.json \
-    data/CNN_weights/12v45_weights.hd5 \
+    data/CNN_weights/S12vS45_s47_weights.hd5 \
     data/CNN_datasets/S12vS45_s47_VALIDATION.hd5
 ```
 

@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw
 import matplotlib.path   as mplPath
 from get_tumor_centroids import *
 from get_tumor_polygons  import *
-from segment_tumors import *
+from segment import *
 from candidate_dict_utilities import *
 from scipy.ndimage import measurements
 from itertools import izip
